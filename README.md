@@ -49,15 +49,47 @@ Phase 0 目标：2 个 A 类应用，跑通全流程，采集 20-30 条高质量
 - **步骤 2/3/4 可并行** — 测试用例生成与应用开发互不依赖
 - **步骤 7 diff 机制** — 同一套用例跑两个版本，Golden pass + Buggy fail 的差异点即 Bug 命中点，自动产出正负样本对
 
+## 当前进度（更新于 2026-03-31）
+
+### App 1: md2wechat（Markdown 转微信公众号排版）
+
+| 步骤 | 状态 | 说明 |
+|------|------|------|
+| 1. PRD + L1/L2/L3 | ✅ 完成 | `prds/md2wechat.md`，19 条验收点 |
+| 2. 测试用例生成 | ⏳ 待完成 | Moss 待执行 |
+| 3. Golden App | ✅ 完成 | `apps/md2wechat/golden.html` |
+| 4. Buggy App | ✅ 完成 | `apps/md2wechat/buggy.html`，3 个 bug |
+| 5. Bug 清单提交 | ✅ 完成 | Fabrice 提交 |
+| 6. Bug 清单审核 | ✅ 完成 | 已写入 PRD 末尾 |
+| 7. mano-cua 采集 | ⏳ 等步骤 2 | — |
+| 8. Ground Truth 标注 | ⏳ 等步骤 7 | — |
+
+### App 2: tripsplit（旅行分账记账本）
+
+| 步骤 | 状态 | 说明 |
+|------|------|------|
+| 1. PRD + L1/L2/L3 | ✅ 完成 | `prds/tripsplit.md`，19 条验收点 |
+| 2. 测试用例生成 | ⏳ 待完成 | Moss 待执行 |
+| 3. Golden App | ✅ 完成 | `apps/tripsplit/golden/`（Flask 多文件） |
+| 4. Buggy App | ✅ 完成 | `apps/tripsplit/buggy/`，3 个 bug |
+| 5. Bug 清单提交 | ✅ 完成 | Fabrice 提交 |
+| 6. Bug 清单审核 | ✅ 完成 | 已写入 PRD 末尾（3/31 16:05） |
+| 7. mano-cua 采集 | ⏳ 等步骤 2 | — |
+| 8. Ground Truth 标注 | ⏳ 等步骤 7 | — |
+
+### 下一步
+
+- **Moss**：对两个应用分别执行步骤 2（生成验收任务和测试数据）
+- 步骤 2 完成后进入步骤 7（mano-cua 采集）
+
 ## 里程碑
 
 | 阶段 | 内容 | 状态 |
 |------|------|------|
-| Day 1 (3/30) | PRD + 应用开发 + mano-cua 实测 | ✅ 完成 |
-| Day 2 (3/31) | md2wechat Golden 采集 + TripSplit 开发 | ✅ 完成 |
-| Day 3 | md2wechat Buggy 采集 + TripSplit 采集 | 待开始 |
-| Day 3~4 | 人工 Ground Truth 标注 | 待开始 |
-| Day 4 | Phase 0 评估报告 + 数据打包 | 待开始 |
+| Day 1（3/30-31） | PRD × 2 + 应用开发 × 2 + Bug 审核 × 2 | ✅ 完成 |
+| Day 2 | Moss 测试用例 + mano-cua 采集轨迹 | ⏳ 待开始 |
+| Day 2-3 | 人工 Ground Truth 标注 | 待开始 |
+| Day 3 | Phase 0 评估报告 + 数据打包 | 待开始 |
 
 ## 文档结构
 
@@ -66,10 +98,18 @@ project/vla-phase0/
 ├── README.md                    # Pichai | 本文件
 ├── DECISIONS.md                 # Pichai/Moss | 决策+待确认
 ├── prds/                        # Pichai | PRD + L1/L2/L3 + Bug清单
-├── apps/                        # Fabrice | Golden/Buggy App + 技术说明
+│   ├── md2wechat.md
+│   └── tripsplit.md
+├── apps/                        # Fabrice | Golden/Buggy App
+│   ├── md2wechat/
+│   │   ├── golden.html
+│   │   └── buggy.html
+│   └── tripsplit/
+│       ├── golden/
+│       └── buggy/
 ├── test/fixtures/               # Moss | 测试输入数据（按App分子目录）
 ├── test/reports/                # Moss | 验收结果
-└── meetings/                    # Pichai | 讨论纪要（只记结论和分歧）
+└── meetings/                    # Pichai | 讨论纪要
 ```
 
 ## 文件维护规则
