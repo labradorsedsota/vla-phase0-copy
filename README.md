@@ -49,20 +49,25 @@ Phase 0 目标：2 个 A 类应用，跑通全流程，采集 20-30 条高质量
 - **步骤 2/3/4 可并行** — 测试用例生成与应用开发互不依赖
 - **步骤 7 diff 机制** — 同一套用例跑两个版本，Golden pass + Buggy fail 的差异点即 Bug 命中点，自动产出正负样本对
 
-## 当前进度（更新于 2026-03-31）
+## 当前进度（更新于 2026-04-01）
 
-### App 1: md2wechat（Markdown 转微信公众号排版）
+### App 1: md2wechat（Markdown 转微信公众号排版）— 集中完成中
 
 | 步骤 | 状态 | 说明 |
 |------|------|------|
 | 1. PRD + L1/L2/L3 | ✅ 完成 | `prds/md2wechat.md`，19 条验收点 |
-| 2. 测试用例生成 | ⏳ 待完成 | Moss 待执行 |
+| 2. 测试用例生成 | ✅ 完成 | Moss 已生成 |
 | 3. Golden App | ✅ 完成 | `apps/md2wechat/golden.html` |
 | 4. Buggy App | ✅ 完成 | `apps/md2wechat/buggy.html`，3 个 bug |
 | 5. Bug 清单提交 | ✅ 完成 | Fabrice 提交 |
 | 6. Bug 清单审核 | ✅ 完成 | 已写入 PRD 末尾 |
-| 7. mano-cua 采集 | ⏳ 等步骤 2 | — |
+| 7. mano-cua 采集 | 🔄 进行中 | Golden 17/19 完成，Buggy 待启动 |
 | 8. Ground Truth 标注 | ⏳ 等步骤 7 | — |
+
+**Golden App 采集详情：** 见 `test/reports/md2wechat-golden-collection.md`
+- 17/19 条 COMPLETED（89%）
+- L2.1 拖拽上传：标记工具不可采集（mano-cua 无法跨应用拖拽）
+- L1.4 代码高亮：等 Fabrice 修复 marked.js
 
 ### App 2: tripsplit（旅行分账记账本）
 
