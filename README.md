@@ -40,8 +40,9 @@ Phase 0 目标：2 个 A 类应用，跑通全流程，采集 20-30 条高质量
 步骤 5: Fabrice 将 Bug 清单提交给 Pichai
 步骤 6: Pichai 审核合理性后写入 PRD 末尾
 步骤 7: mano-cua 用同一套测试用例分别跑 Golden 和 Buggy
-步骤 8: Moss 拿 Bug 清单作为 Ground Truth，标注轨迹数据
 ```
+
+> Ground Truth 标注由 Mano 团队负责，不在本工作流范围内。
 
 ### ⚠️ 关键约束
 
@@ -62,7 +63,6 @@ Phase 0 目标：2 个 A 类应用，跑通全流程，采集 20-30 条高质量
 | 5. Bug 清单提交 | ✅ 完成 | Fabrice 提交 |
 | 6. Bug 清单审核 | ✅ 完成 | 已写入 PRD 末尾 |
 | 7. mano-cua 采集 | ✅ 完成 | Golden 18/19，Buggy 18/18，共 36 条有效轨迹 |
-| 8. Ground Truth 标注 | 🔄 进行中 | 3 个 Bug 全部命中，Moss 标注中 |
 
 **采集详情：**
 - Golden App：见 `test/reports/md2wechat-golden-collection.md`（17/19 完成）
