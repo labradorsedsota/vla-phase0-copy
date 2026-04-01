@@ -61,13 +61,14 @@ Phase 0 目标：2 个 A 类应用，跑通全流程，采集 20-30 条高质量
 | 4. Buggy App | ✅ 完成 | `apps/md2wechat/buggy.html`，3 个 bug |
 | 5. Bug 清单提交 | ✅ 完成 | Fabrice 提交 |
 | 6. Bug 清单审核 | ✅ 完成 | 已写入 PRD 末尾 |
-| 7. mano-cua 采集 | 🔄 进行中 | Golden 17/19 完成，Buggy 待启动 |
+| 7. mano-cua 采集 | 🔄 进行中 | Golden 17/19，Buggy 17/17 完成，L1.4 等修复 |
 | 8. Ground Truth 标注 | ⏳ 等步骤 7 | — |
 
-**Golden App 采集详情：** 见 `test/reports/md2wechat-golden-collection.md`
-- 17/19 条 COMPLETED（89%）
+**采集详情：**
+- Golden App：见 `test/reports/md2wechat-golden-collection.md`（17/19 完成）
+- Buggy App：见 `test/reports/md2wechat-buggy-collection.md`（17/17 完成，3 个 Bug 全部捕获）
 - L2.1 拖拽上传：标记工具不可采集（mano-cua 无法跨应用拖拽）
-- L1.4 代码高亮：等 Fabrice 修复 marked.js
+- L1.4 代码高亮：等 Fabrice 修复 marked.js 后补采
 
 ### App 2: tripsplit（旅行分账记账本）
 
