@@ -1,0 +1,38 @@
+# VLA Phase 0 应用注册表
+# 权威来源：ID 映射、缩写、计数器
+
+project: VLA
+project_full: "[P1] VLA - 测试数据采集"
+
+apps:
+  - id: VLA-M2W
+    abbr: m2w
+    name: "md2wechat"
+    name_cn: "Markdown转微信格式"
+    type: web
+    testpoints: 19  # L1(5+2拆分) + L2(7) + L3(5)
+    bugs: 3         # M2W-B01 ~ M2W-B03
+
+  - id: VLA-TS
+    abbr: ts
+    name: "tripsplit"
+    name_cn: "旅行分账"
+    type: web
+    testpoints: 15
+    bugs: 3         # TS-B01 ~ TS-B03
+
+team:
+  - id: pichai
+    role: PM
+    bot: lynx_bot
+  - id: fabrice
+    role: 研发
+    bot: hermes_bot
+  - id: moss
+    role: 测试/采集
+    bot: moss_bot
+
+counters:
+  task: 14       # 最新: VLA-T014，下一个: VLA-T015
+  decision: 13   # 最新: VLA-D013，下一个: VLA-D014
+  meeting: 2     # VLA-MTG-0330, VLA-MTG-0331
