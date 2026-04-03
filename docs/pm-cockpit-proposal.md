@@ -89,7 +89,7 @@ pm-cockpit Skill（规范层 + 巡检层）
 （正常任务描述）
 
 ---
-[tid: vla-m2w-v1-L2.4-01]
+[mosstid: vla-m2w-v1-L2.4-01]
 ```
 
 **检索示例：**
